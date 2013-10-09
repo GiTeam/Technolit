@@ -44,7 +44,7 @@ echo "
         <div class='logoText'>
 
 			<a href='index.php'>
-				<img width='240px'  alt='Технолит Mаркет'  src='http://".$serverName."/SIMG/ServLogo/Texnolit.png'/></div>
+				<img width='240px'  alt='Технолит Mаркет'  src='http://".$serverName."/SIMG/ServLogo/Texnolit.png'/>
             </a>
 
         </div>
