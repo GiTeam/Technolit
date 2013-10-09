@@ -1,0 +1,382 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Russo+One&subset=latin,cyrillic);
+@import url(http://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic-ext,latin-ext,cyrillic);
+
+body 
+{
+    background-color: #EFEFEF;
+    background-image: url('../SIMG/ServFon/bodyBg.png');
+    background-repeat: repeat;
+}
+
+a
+{
+    text-decoration: none;
+	border: none;
+}
+
+a img
+{
+	border: none;
+}
+
+h3
+{
+	font-family:Arial, Helvetica, sans-serif;
+	color: #504F30;
+	text-shadow: 0 0 1px rgba(62,61,28,0.40);
+}
+
+div.centre 
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+}
+/* ---------------------- Begin blocks ---------------------- */
+.main
+{
+    
+    width: 960px;
+    max-width: 960px;
+    min-width: 960px;
+    
+    height: 100%;
+  
+    margin: 0 auto;
+    clear: none;
+    
+    background-color: #F2FDFF; 
+  
+    cursor: auto;
+  
+    border: 0px;
+	border-radius: 15px;
+    border-top-right-radius:15px;
+    border-top-left-radius:15px;
+    border-bottom-right-radius:15px;
+    border-bottom-left-radius:15px;
+    
+    box-shadow: 1px 0px 20px rgba(50,50,100,0.30);   
+
+    
+}
+
+.header
+{
+	display: block;
+    width: 960px;
+    max-width: 960px;
+    min-width: 960px;
+    min-height: 200px;
+    
+    margin: 0;
+    
+    clear: both;
+    
+    background-color: #F2FDFF;
+    background-image: url('../SIMG/ServFon/logot_fon.gif');
+    background-repeat: repeat-x; 
+    
+    border-top-right-radius:15px;
+    border-top-left-radius:15px;
+    outline: none;
+}
+
+.menu_hor
+{
+    width: 960px;
+    min-width: 960px;
+    max-width: 960px;
+    
+    background-color: #136E93;
+    background-image: url('../SIMG/Serv/Fon.png');
+    background-repeat: repeat-x;
+    
+    float: left;
+    clear: none;
+    margin-bottom: 2px;
+
+}
+
+.menu_ver
+{
+	position:relative;
+    width: 245px;
+    min-width: 245px;
+    max-width: 245px;
+    min-height: 200px;
+    
+    background-color: #F0FAFD;
+    
+    float: left;
+    clear: left;
+    margin-left: 2px;
+    margin-right:3px;
+
+}
+
+.content
+{
+	color: rgb(102, 102, 102);
+    width: 703px;
+    max-width: 703px;
+    min-width: 703px;
+	overflow: auto;
+    
+    background-color: #EBF6FE;
+    
+    float: left;
+    clear: right;
+    margin-right: 2px;
+    
+	border: 2px;
+    border-top-right-radius: 9px;
+    border-top-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    border-bottom-left-radius: 9px; 
+
+    box-shadow: 1px 1px 6px rgba(50,50,100,0.30), inset 1px 2px 20px rgba(255,255,255,0.50);   
+    -moz-box-shadow: 1px 1px 6px rgba(50,50,100,0.30), inset 1px 2px 20px rgba(255,255,255,0.50);   
+    -webkit-box-shadow: 1px 1px 6px rgba(50,50,100,0.30), inset 1px 2px 20px rgba(255,255,255,0.50); 
+}
+
+.footer
+{   
+    width: 100%;
+   
+    background-color: #136E93;
+    color: #CCCCCC;
+    
+    float: left;
+    clear: both;    
+
+    border-bottom-right-radius:15px;
+    border-bottom-left-radius:15px;  
+    
+    text-align:center;
+    font-size:9px;
+    font-family: Arial;
+
+    margin-top: 2px;
+    margin-bottom: 0;
+}
+
+.footer a
+{
+    color: #CCCCCC;
+}
+
+/* ---------------------- End Blocks ---------------------- */
+
+/*-------------------------Begin Header-----------------------*/ 
+ 
+.logotype
+{
+	display: block;
+	width: 220px;
+    float:left;
+    clear: left;
+	margin-top: 25px;
+	margin-left: 60px;
+	
+	border: none;
+    outline: none;
+}
+
+.logoText
+{
+	display: block;
+	width: 300px;
+    float: left;
+    clear: right;
+	
+    border: none;
+    outline: none;
+	margin-top: 35px;
+	margin-left: 50px;
+    text-decoration: none;
+	
+	text-align: center;
+}  
+
+/* ---------------------- END LOGO ---------------------- */ 
+
+
+/* ---------------------- Begin contain ---------------------- */ 
+
+.contain
+{
+	color: #2f2f2f;
+	display: block;
+	float: left;
+	clear: both;
+	overflow: auto;
+	
+	width:  695px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 5px;
+	margin-left: 8px;
+	
+	text-decoration:  none;
+	font-size: 1.06em;
+	font:"Lucida Sans Unicode",Helvetica,Arial,Verdana,sans-serif;
+}
+
+/* ---------------------- END contain ---------------------- */ 
+
+
+/* ---------------------- Begin lables ---------------------- */
+
+	.lables{
+    display: block;
+    clear:both;
+
+	height:33px;
+	max-width:695px;
+    width:695px;
+    margin-top: 50px; 
+
+	font-family:Helvetica,Arial,Verdana,sans-serif;
+
+	
+	}
+	
+	.lables ul{
+	margin:0;
+	padding:0;
+	width:auto;
+	float:left;
+	}
+	
+	.lables ul li{
+	display:block;
+	float:left;
+	margin:0 8px;
+	}
+
+	.lables ul li a{
+	display:block;
+	float:left;
+	text-decoration:none;
+	height:33px;
+	}
+
+
+/* ----------------------- END lables ----------------------- */
+
+
+/* ---------------------- Begin Fform ---------------------- */ 
+  #Fform
+  {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px; 
+   
+    width: 500px;
+    max-width: 500px;
+    min-width: 500px;
+    min-height: 200px;
+    
+    background-color: #1594C6;
+    
+    margin: auto;
+    margin-bottom:5px;
+     
+  }
+  
+/* ----------------------- End Fform ----------------------- */
+
+
+/* ---------------------- Begin horizontal nav ---------------------- */
+#dolphincontainer{
+	position:relative;
+	height:56px;
+	color:#EEEEEE;
+	background:#126E95;
+	width:100%;
+	font-family:Helvetica,Arial,Verdana,sans-serif;
+	}
+
+#dolphinnav{
+	position:relative;
+	height:33px;
+	font-size:12px;
+	text-transform:uppercase;
+	font-weight:bold;
+	background:#126E95 url('../SIMG/ServMenu/dolphin_bg.gif') repeat-x bottom left;
+	padding:0 0 0 20px;
+	}
+
+#dolphinnav ul{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	width:auto;
+	float:left;
+	}
+
+#dolphinnav ul li{
+	display:block;
+	float:left;
+	margin:0 1px;
+	}
+
+#dolphinnav ul li a{
+	display:block;
+	float:left;
+	color:#EEEEEE;
+	text-decoration:none;
+	padding:0 0 0 20px;
+	height:33px;
+	}
+
+#dolphinnav ul li a span{
+	padding:12px 20px 0 0;
+	height:21px;
+	float:left;
+	}
+
+#dolphinnav ul li a:hover{
+	color:#FDFDFD;
+	background:transparent url('../SIMG/ServMenu/dolphin_bg-OVER.gif') repeat-x bottom left;
+	}
+
+#dolphinnav ul li a:hover span{
+	display:block;
+	width:auto;
+	cursor:pointer;
+	}
+
+#dolphinnav ul li a.current,#dolphinnav ul li a.current:hover
+{
+	color:#FDFDFD;
+	background:#1D6893 url('../SIMG/ServMenu/dolphin_left-ON.gif') no-repeat top left;
+	line-height:275%;
+}
+
+#dolphinnav ul li a.current span
+{
+	display:block;
+	padding:0 20px 0 0;
+	width:auto;
+	background:#1D6893 url('../SIMG/ServMenu/dolphin_right-ON.gif') no-repeat top right;
+	height:33px;
+}
+	
+#form-search 
+{
+   display: block;
+   clear: right;
+   float: right;
+   width: 195px;
+   margin-top: 5px;
+   margin-right: 8px;
+   height:30px;
+}
+
+#form-search1{
+	height: 30px;
+}
+/* ---------------------- END horizontal nav ---------------------- */

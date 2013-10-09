@@ -33,23 +33,22 @@ echo "
 
     <header class='header'> 
 
-        <div class='logotype'> 
-
-        <a href='index.php'>
-			<img width='200px'  alt='TM'  src='http://".$serverName."/SIMG/ServLogo/min30.png'/>
-		</a>
-
-        </div>
+        <figure class='logotype'>
+			<a href='index.php'>
+				<img width='200px'  alt='TM'  src='http://".$serverName."/SIMG/ServLogo/min30.png'/>
+			</a>
+        </figure>
 
         <div class='logoText'>
-
 			<a href='index.php'>
 				<img width='240px'  alt='Технолит Mаркет'  src='http://".$serverName."/SIMG/ServLogo/Texnolit.png'/>
-            </a>
+			</a>
+		</div>
+		
+		<div class='cart'>
+		</div>
 
-        </div>
-
-    </div>  ";
+    </header>  ";
 	include('menu.php');
 
     echo "<div>
