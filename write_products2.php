@@ -14,6 +14,8 @@ class WriteProducts
 	public $num = 10;//сколько товаров будет выводиться на страницу
 	public $domain = '';//домен
 	public $namepage = 'productorder.php';
+	public $path_picture_product = 'ItemPicture/';// оттуда берем картинки	для товаров
+	public $path_picture_category = 'Categories/';// оттуда берем картинки для категорий
 //////посылаем запрос - получаем результат запроса
 	public function select($query)
 	{
@@ -25,13 +27,74 @@ class WriteProducts
 		}
 		else return $result;
 	}
-		
+/////// изменение размеров картинки
+public function changeImageSize($path, $id_picture)
+		{
+			$templink = $path.$id_picture.".jpg";
+			if (file_exists($templink)) 
+				{
+						$size = getimagesize ($templink);
+						if (($size[0] > 150) && ($size[0]>= $size[1])) $width = "150";
+						else $width = "";
+						if (($size[1] > 150) && ($size[1]> $size[0])) $height = "150";
+						else $height = "";
+				}
+			else
+				{
+					$width = "";
+					$height = "";
+					$templink = $this->path_picture_product."list.png";
+				}
+			if ($width != "") $width = "width='".$width."'";
+			if ($height != "") $height = "height='".$height."'";
+			$picture = $templink;
+			return array($width, $height,$picture);
+		}
+/////// вывод пользователю информации
+public function outputInformation ($temp_array, $category)
+{
+	if($category == 'product') 
+				{
+					list($width, $height, $picture) = $this->changeImageSize($this->path_picture_product,$temp_array['id']);				
+					echo $page = "<div class='item' id='".$temp_array['id']."'>
+						<div class='name'>".$temp_array['name']."</div>
+						<div class='itemPicture'>
+							<img src='".$this->domain.$picture."' ".$width." ".$height." align='middle'>
+						</div>
+						<div class='submit-c'>
+							<input class='submit-butt' type='submit' value='Заказать' />
+						</div>
+
+						<div class='citemtxt'>
+
+							<p class='way'>".$this->cat.">>".$this->subcat."</p>
+							<p class='optxt'>".$temp_array['description']."</p>
+
+						</div>
+
+						<div><div style='height:1px;overflow:hidden;clear:both;'></div></div>
+
+					</div>";	
+				}
+				else 
+				{
+					$id_picture = $this->catid."-".$temp_array['numberSub'];// номер картинки для подкатегории
+					list($width, $height, $picture) = $this->changeImageSize($this->path_picture_category, $id_picture);
+					echo $page = "<a href=".$this->namepage."?catid=".$this->catid."&numberSub=".$temp_array['numberSub']."&page=1>
+								<div class='category'>
+								<div class='categoryPicture'>
+									<img src=".$this->domain.$picture." ".$width." ".$height." align='middle'>
+								</div>
+								<div class='name'>".$temp_array['nameSubCat']."</div>
+								</div></a>";
+				}
+	}				
 ////////// Вывод подкатегорий, если нет товаров
 /////////// Вывод товаров, если есть товары
 	public function writeProduct($category)
   {
     $c = 0;
-	$this->domain = "http://".$_SERVER['SERVER_NAME']."/ItemPicture/";
+	$this->domain = "http://".$_SERVER['SERVER_NAME']."/"; //имя домена
     switch($category)
 	{
 	case 'category':
@@ -59,55 +122,7 @@ class WriteProducts
 		$c++;
 		if($temp_array ) 
 		{ 
-			if($category == 'product') 
-			{
-				if (file_exists("ItemPicture/".$temp_array['id'].".jpg")) 
-					{
-						$size = getimagesize ("ItemPicture/".$temp_array['id'].".jpg");
-						if (($size[0] > 150) && ($size[0]>= $size[1])) $width = "150";
-						else $width = "";
-						if (($size[1] > 150) && ($size[1]> $size[0])) $height = "150";
-						else $height = "";
-						$picture = $temp_array['id'].'.jpg';
-					}
-				else
-				{
-					$width = "";
-					$height = "";
-					$picture = $temp_array['picture'];
-				}
-				if ($width != "") $width = "width='".$width."'";
-				if ($height != "") $height = "height='".$height."'";				
-				echo 
-						
-						$page = "<div class='item' id='".$temp_array['id']."'>
-						<div class='name'>".$temp_array['name']."</div>
-						<div class='itemPicture'>
-							<img src='".$this->domain.$picture."' ".$width." ".$height." align='middle'>
-						</div>
-						<div class='submit-c'>
-							<input class='submit-butt' type='submit' value='Заказать' />
-						</div>
-
-						<div class='citemtxt'>
-
-							<p class='way'>".$this->cat.">>".$this->subcat."</p>
-							<p class='optxt'>".$temp_array['description']."</p>
-
-						</div>
-
-						<div><div style='height:1px;overflow:hidden;clear:both;'></div></div>
-
-					</div>";	
-			}
-			else 
-				echo $page = '<a href='.$this->namepage.'?catid='.$this->catid.'&numberSub='.$temp_array['numberSub'].'&page=1>
-								<div class=category>
-								<div class=categoryPicture>
-									<img src=http://technolit-tm.ru/pic/list.png>
-								</div>
-								<div class=name>'.$temp_array['nameSubCat'].'</div>
-								</div></a>';
+			$this->outputInformation ($temp_array, $category);
 		}
 	} while($temp_array = mysql_fetch_assoc($result) and ($c < $numeric));
 	echo "</div>";  
@@ -116,53 +131,7 @@ class WriteProducts
 		$c++;
 		if($temp_array) 
 		{
-			if ($category == 'product') 
-			{
-				if (file_exists("ItemPicture/".$temp_array['id'].".jpg")) 
-					{
-						$size = getimagesize ("ItemPicture/".$temp_array['id'].".jpg");
-						if (($size[0] > 150) && ($size[0]>= $size[1])) $width = "150";
-						else $width = "";
-						if (($size[1] > 150) && ($size[1]> $size[0])) $height = "150";
-						else $height = "";
-						$picture = $temp_array['id'].'.jpg';
-					}
-				else
-				{
-					$width = "";
-					$height = "";
-					$picture = $temp_array['picture'];
-				}
-				if ($width != "") $width = "width='".$width."'";
-				if ($height != "") $height = "height='".$height."'";	
-				echo $page = "<div class='item' id='".$temp_array['id']."'>
-						<div class='name'>".$temp_array['name']."</div>
-						<div class='itemPicture'>
-							<img src='".$this->domain.$picture."' ".$width." ".$height." align='middle'>
-						</div>
-						<div class='submit-c'>
-							<input class='submit-butt' type='submit' value='Заказать' />
-						</div>
-
-						<div class='citemtxt'>
-
-							<p class='way'>".$this->cat.">>".$this->subcat."</p>
-							<p class='optxt'>".$temp_array['description']."</p>
-
-						</div>
-
-						<div><div style='height:1px;overflow:hidden;clear:both;'></div></div>
-
-					</div>";
-			}		
-			else 
-				echo $page = '<a href='.$this->namepage.'?catid='.$this->catid.'&numberSub='.$temp_array['numberSub'].'&page=1>
-								<div class=category>
-								<div class=categoryPicture>
-									<img src=http://technolit-tm.ru/pic/list.png>
-								</div>
-								<div class=name>'.$temp_array['nameSubCat'].'</div>
-								</div></a>';
+			$this->outputInformation ($temp_array, $category);
 		}
 	} while($temp_array = mysql_fetch_assoc($result));
 	echo "</div>";
