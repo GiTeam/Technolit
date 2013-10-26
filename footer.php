@@ -7,7 +7,7 @@ echo"  <div>
         <hr />
         &nbsp; 
         &copy; 
-        <a href='mailto:gitrus@yandex.com'> G-i-T Group.</a></ADRESS>
+        <a href='http://giteam.ru'> GiTeam.</a></ADRESS>
     </div>
     <div>
     <div style='height:1px;overflow:hidden;clear:both;'></div>
