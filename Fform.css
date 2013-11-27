@@ -1,50 +1,56 @@
 ﻿/*--------------------------------------- OL ---------------------------------------*/ 
- 
+#itemBox
+{
+
+	color: #407781;
+	padding: 0px;
+	margin: 20px;
+}
+#itemBox .form-field
+{
+	width:325px;
+	
+}
 /*-------------------------------------END OL -------------------------------------*/  
 
 
-.form-container {
-   border: 1px solid #f2e3d2;
+.form-container
+{
+	border: 1px solid #f2e3d2;
 
-   background: #9DCFEA;
-  /* background: -webkit-gradient(linear, left top, left bottom, from(#80C6ED), to(#096A90));
-   background: -webkit-linear-gradient(top, #80C6ED, #096A90);
-   background: -moz-linear-gradient(top, #80C6ED, #096A90);
-   background: -ms-linear-gradient(top, #80C6ED, #096A90);
-   background: -o-linear-gradient(top, #80C6ED, #096A90); 
+	background: #DBEDF9;
 
-   background-image: -ms-linear-gradient(top, #096A90 0%, #80C6ED 100%);*/
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: rgba(000,000,000,0.9) 0 0px 2px, inset rgba(255,255,255,0.4) 0 0px 2px;
+	-moz-box-shadow: rgba(000,000,000,0.9) 0 0px 2px, inset rgba(255,255,255,0.4) 0 0px 2px;
+	box-shadow: rgba(000,000,000,0.9) 0 0px 2px, inset rgba(255,255,255,0.4) 0 0px 2px;
 
-   -webkit-border-radius: 10px;
-   -moz-border-radius: 10px;
-    border-radius: 10px;
-   -webkit-box-shadow: rgba(000,000,000,0.9) 0 0px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
-   -moz-box-shadow: rgba(000,000,000,0.9) 0 0px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
-   box-shadow: rgba(000,000,000,0.9) 0 0px 2px, inset rgba(255,255,255,0.4) 0 0px 0;
+	font-family: 'Helvetica',Helvetica,sans-serif;
+	text-decoration: none;
+	vertical-align: middle;
+	min-width:300px;
+	padding-left:40px;
+	padding-right:40px;
+	padding-top:15px;
+	padding-bottom:10px;
+	width:400px;
 
-   font-family: 'Helvetica Neue',Helvetica,sans-serif;
-   text-decoration: none;
-   vertical-align: middle;
-   min-width:300px;
-   padding-left:40px;
-   padding-right:40px;
-   padding-top:15px;
-   padding-bottom:10px;
-   width:400px;
-
-   margin:auto;
-   }
+	margin:auto;
+}
    
-.form-field {
+.form-field
+{
    border: 1px solid #0e5d6b;
    
-   background: #e5f4ff;
+   background: #FaFeFF;
    
-   -webkit-border-radius: 3px;
-   -moz-border-radius: 3px;
-   border-radius: 3px;
+   -webkit-border-radius: 2px;
+   -moz-border-radius: 2px;
+   border-radius: 2px;
    
-   color: #407781;
+   color: #306070;
    
    -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
    -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(000,000,000,0.7) 0 0px 0px;
@@ -53,36 +59,42 @@
    padding:5px;
    
    margin-bottom:15px;
-   width:300px;
-   }
+   width:350px;
+}
    
-.form-field:focus {
-   background: #fFffff;
-   color: #325255;
-   }
+.form-field:focus 
+{
+   background: #fbfbff;
+   color: #204040;
+   border: 1px solid #9ead5b;
+}
    
-.form-container h2 {
-   text-shadow: # 005273 0 1px 0 ;
-   font-size:19px;
+.form-container h2 
+{
+   text-shadow: #106283 0 1px 0 ;
+   font-size: 19px;
    margin: 0 0 8px 0;
-   font-weight:bold;
-   text-align:center;
-    }
+
+   text-align: center;
+   letter-spacing: 0.02em;
+}
     
-.form-title {
+.form-title 
+{
    margin-bottom:8px;
    color: #082d55;
-   text-shadow: #00597a 0 1px 0 ;
-   font-style: oblique;
-   font-weight:bold;
-   }
+   text-shadow: #106283 0 1px 0 ;
+   letter-spacing: 0.03em;
+}
    
-.submit-container {
+.submit-container
+{
    margin:8px 0;
    text-align:right;
-   }
+}
    
-.submit-button {
+.submit-button
+{
    border: 1px solid #ccc76c;
    background: #a6ad74;
    background: -webkit-gradient(linear, left top, left bottom, from(#f6f7ca), to(#a6ad74));
@@ -91,9 +103,9 @@
    background: -ms-linear-gradient(top, #f6f7ca, #a6ad74);
    background: -o-linear-gradient(top, #f6f7ca, #a6ad74);
    background-image: -ms-linear-gradient(top, #f6f7ca 0%, #a6ad74 100%);
-   -webkit-border-radius: 4px;
-   -moz-border-radius: 4px;
-   border-radius: 4px;
+   -webkit-border-radius: 3px;
+   -moz-border-radius: 3px;
+   border-radius: 3px;
    -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 0px 0;
    -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 0px 0;
    box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 0px 0;
@@ -104,9 +116,10 @@
    font-size: 14px;
    text-decoration: none;
    vertical-align: middle;
-   }
+}
    
-.submit-button:hover {
+.submit-button:hover
+{
    border: 1px solid #447314;
    text-shadow: #31540c 0 1px 0;
    background: #6aa436;
@@ -117,9 +130,10 @@
    background: -o-linear-gradient(top, #8dc059, #6aa436);
    background-image: -ms-linear-gradient(top, #8dc059 0%, #6aa436 100%);
    color: #fff;
-   }
+}
    
-.submit-button:active {
+.submit-button:active 
+{
    text-shadow: #31540c 0 1px 0;
    border: 1px solid #447314;
    background: #8dc059;
@@ -130,14 +144,13 @@
    background: -o-linear-gradient(top, #6aa436, #8dc059);
    background-image: -ms-linear-gradient(top, #6aa436 0%, #8dc059 100%);
    color: #fff;
-   }
-
-   
+}
 
 /*--------------------------------------- PLUS ---------------------------------------*/  
 
-#plus {
-   border: 1px solid #ccc76c;
+#plus
+{
+   border: 1px solid #aca74c;
 
    background: #6aa436;
    background: -webkit-gradient(linear, left top, left bottom, from(#8dc059), to(#6aa436));
@@ -154,16 +167,17 @@
    -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 0px 0;
    box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 0px 0;
 
-   text-shadow: #a6a62a 0 1px 0;
+   text-shadow: #a0a027 0 1px 0;
    color: #FFFFFF;
    font-family: helvetica, serif;
-   padding: 2px 4px;
+   padding: 4px 4px;
    font-size: 14px;
    text-decoration: none;
 
    margin-left: 25%; 
    
-   }
+}
+
 #plus:hover 
 {
    border: 1px solid #447314;
@@ -204,7 +218,7 @@
    text-shadow: #a6a62a 0 1px 0;
    color: #FFFFFF;
    font-family: helvetica, serif;
-   padding: 2px 6px;
+   padding: 4px 6px;
    font-size: 14px;
    text-decoration: none;
    font-weight: bolder;

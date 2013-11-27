@@ -43,6 +43,7 @@ div.centre
     height: 100%;
   
     margin: 0 auto;
+	padding:0;
     clear: none;
     
     background-color: #F2FDFF; 
@@ -67,7 +68,7 @@ div.centre
     width: 960px;
     max-width: 960px;
     min-width: 960px;
-    min-height: 200px;
+    min-height: 160px;
     
     margin: 0;
     
@@ -89,7 +90,7 @@ div.centre
     max-width: 960px;
     
     background-color: #136E93;
-    background-image: url('../SIMG/Serv/Fon.png');
+    background-image: url('../SIMG/ServFon/fon.png');
     background-repeat: repeat-x;
     
     float: left;
@@ -110,7 +111,7 @@ div.centre
     
     float: left;
     clear: left;
-    margin-left: 2px;
+    margin-left: 3px;
     margin-right:3px;
 
 }
@@ -119,17 +120,17 @@ div.centre
 {
 	color: rgb(102, 102, 102);
     width: 703px;
-    max-width: 703px;
-    min-width: 703px;
+    max-width: 706px;
+    min-width: 706px;
 	overflow: auto;
     
     background-color: #EBF6FE;
     
     float: left;
     clear: right;
-    margin-right: 2px;
+    margin-right: 3px;
     
-	border: 2px;
+	
     border-top-right-radius: 9px;
     border-top-left-radius: 9px;
     border-bottom-right-radius: 9px;
@@ -173,30 +174,35 @@ div.centre
 .logotype
 {
 	display: block;
-	width: 220px;
+	width: 160px;
     float:left;
     clear: left;
-	margin-top: 25px;
-	margin-left: 60px;
+	margin:0;
+	margin-top: 20px;
+	margin-left: 37px;
 	
 	border: none;
     outline: none;
 }
 
-.logoText
+.logotext
 {
 	display: block;
-	width: 300px;
+	width: 440px;
     float: left;
-    clear: right;
-	
+	margin: 0;
+	margin-top: 55px;
+	margin-left: 25px;
     border: none;
     outline: none;
-	margin-top: 35px;
-	margin-left: 50px;
-    text-decoration: none;
 	
 	text-align: center;
+	
+	font-family: 'Russo One', sans-serif;
+	font-weight: bold;
+	font-size: 45px;
+	color: #056187;
+	
 }  
 
 /* ---------------------- END LOGO ---------------------- */ 

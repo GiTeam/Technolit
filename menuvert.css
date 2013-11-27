@@ -1,0 +1,64 @@
+/* =-=-=-=-=-=-=-[Menu Vertecal]-=-=-=-=-=-=-=- */
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	}
+	
+#menuVert {
+	width: 230px;
+	border: none;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 10px;
+	margin-bottom : 10px;
+	}
+	
+#muneVert ul {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	width:auto;
+	float:left;
+
+	}
+	
+#menuVert li a {
+	display: block;
+  	height: 32px;
+  	height: 24px;
+	
+	text-decoration: none;
+	font-weight:bold;
+	color: #FFF;
+	font-family:Helvetica,Arial,Verdana,sans-serif;
+	text-transform:uppercase;
+	font-size:13px;
+	
+	background: url(../SIMG/ServMenu/menu3.png);
+	padding: 8px 0 0 23px;
+	}	
+	
+#menuVert li a:link {
+	color: #FFFFFF;
+	background: url(../SIMG/ServMenu/menu3.png);
+	padding: 8px 0 0 23px;
+	}
+#menuVert li a:visited {
+	color: #FFFFFF;
+	background: url(../SIMG/ServMenu/menu3.png);
+	padding: 8px 0 0 23px;
+	}
+	
+#menuVert li a:hover
+{
+	color: #283A50;
+	background: url(../SIMG/ServMenu/menu32.png);
+	padding: 8px 0 0 23px;
+	}
+#menuVert li a:active {
+	color: #283A50;
+	background: url(../SIMG/ServMenu/menu32.png);
+	padding: 8px 0 0 23px;
+	}
+/* =-=-=-=-=-=-=-[Menu Vertecal]-=-=-=-=-=-=-=- */

@@ -163,7 +163,8 @@
    }
    
 
-.submit-butt {
+.add-button
+{
    border: 1px solid #447314;
    text-shadow: #31540c 0 1px 0;
    background: #6aa436;
@@ -189,9 +190,10 @@
    vertical-align: middle;
 
    font-weight: bold;
-   }
+}
 
-.submit-butt:hover {
+.add-button:hover 
+{
    border: 1px solid #447314;
    text-shadow: #31540c 0 1px 0;
    background: #6aa436;
@@ -202,9 +204,10 @@
    background: -o-linear-gradient(top, #8dc059, #6aa436);
    background-image: -ms-linear-gradient(top, #8dc059 0%, #6aa436 100%);
    color: #fff;
-   }
+}
    
-.submit-butt:active {
+.add-button:active 
+{
    text-shadow: #31540c 0 1px 0;
    border: 1px solid #447314;
    background: #8dc059;
@@ -215,5 +218,5 @@
    background: -o-linear-gradient(top, #6aa436, #8dc059);
    background-image: -ms-linear-gradient(top, #6aa436 0%, #8dc059 100%);
    color: #fff;
-   }
+}
 /* ---------------------- End ITEM ---------------------- */
